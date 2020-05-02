@@ -541,9 +541,13 @@ function s($string, $number = null)
                         $new = substr($original, 0, -2);
                         $new .= 'ies';
                 }
-                elseif (false && substr($original, -1) == 'y')
+                elseif (substr($original, -1) == 'y')
                 {
                         $new = substr($original, 0, -1);
+			if (substr($original, -1) == 'e')
+			{
+				$new = substr($original, 0, -1);
+			}
                         $new .= 'ies';
                 }
                 elseif (substr($original, -1) != 's')
