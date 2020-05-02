@@ -525,7 +525,7 @@ function s($string, $number = null)
         }
         elseif (round($number) == 1)
         {
-		if (substr($number, -3) == 'ies')
+		if (substr($string, -3) == 'ies')
 		{
 			return substr($string, 0, -3).'y';
 		}
