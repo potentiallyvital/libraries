@@ -525,7 +525,14 @@ function s($string, $number = null)
         }
         elseif (round($number) == 1)
         {
-                return rtrim($string, 's');
+		if (substr($number, -3) == 'ies')
+		{
+			return substr($string, 0, -3).'y';
+		}
+		else
+		{
+			return rtrim($string, 's');
+		}
         }
         else
         {
